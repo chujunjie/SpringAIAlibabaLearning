@@ -1,0 +1,6 @@
+请生成一份入职Offer，具体信息如下：
+1. 候选人姓名：{candidateName}
+2. 入职岗位：{jobPosition}
+3. 入职日期：{entryDate}
+4. 税前薪资范围：{salaryRange}
+5. 核心福利：{welfare}

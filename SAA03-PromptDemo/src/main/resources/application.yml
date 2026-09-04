@@ -1,0 +1,16 @@
+server:
+  port: 8890
+  servlet:
+    encoding:
+      enabled: true
+      force: true
+      charset: utf-8
+spring:
+  application:
+    name: saa03-PromptDemo
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
+      chat:
+        options:
+          model: qwen3-max
