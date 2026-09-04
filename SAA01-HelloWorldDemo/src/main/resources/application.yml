@@ -1,0 +1,13 @@
+server:
+  port: 8888  # 指定当前服务的端口
+  servlet:
+    encoding:
+      enabled: true # 大模型对话中文乱码处理
+      force: true
+      charset: utf-8
+spring:
+  application:
+    name: saa01-hello-world # 微服务名称
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}     # 大模型三件套指定
