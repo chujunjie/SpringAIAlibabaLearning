@@ -1,0 +1,30 @@
+server:
+  port: 8891
+  servlet:
+    encoding:
+      enabled: true
+      force: true
+      charset: utf-8
+spring:
+  application:
+    name: saa04-ChatMemory
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
+      chat:
+        options:
+          model: qwen3-max
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: always #自动创建ChatMemory存储的表结构 - 持久化对应的数据库表
+            platform: mysql
+  datasource:
+    url: ${DEFALUT_MYSQL_URL}
+    username: ${DEFALUT_MYSQL_USERNAME}
+    password: ${DEFALUT_MYSQL_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari: #确保每条 JDBC 连接都使用 utf8mb4 字符集并指定 utf8mb4_unicode_ci 排序
+      connection-init-sql: SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci
+
