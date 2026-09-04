@@ -1,0 +1,16 @@
+server:
+  port: 8892
+  servlet:
+    encoding:
+      enabled: true
+      force: true
+      charset: utf-8
+spring:
+  application:
+    name: saa05-Multimodal
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
+      image:
+        options:
+          model: wanx-v1 # 图片生成模型
