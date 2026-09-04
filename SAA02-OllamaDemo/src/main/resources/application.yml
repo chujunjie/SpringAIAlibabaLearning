@@ -1,0 +1,17 @@
+server:
+  port: 8889
+  servlet:
+    encoding:
+      enabled: true
+      force: true
+      charset: utf-8
+spring:
+  application:
+    name: saa02-ollama
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: qwen3:1.7b
